@@ -1,0 +1,373 @@
+body {
+    margin: 0;
+    padding: 20px;
+    margin-left: 280px;
+    background-color: #081028;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    display: flex; 
+    flex-direction: column; 
+    flex: 1; 
+    padding-left: 20px; 
+    text-align: center;
+}
+
+.header {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header p {
+    color: white;
+    font-size: 19px;
+    margin-left: 8px;
+    margin-right: 55px;
+}
+
+.add-user {
+    background-color: #162b70;
+    border: 1px solid #162b70;
+    color: white;
+    outline-style: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 400px;
+    margin-right: 32px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.add-user:hover {
+    background-color: #122353;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    border: 1px solid #343B4F;
+    background-color: #0B1739;
+    border-radius: 5px;
+    padding: 8px 10px;
+    width: 400px;
+}
+
+.search-container input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 5px;
+    background-color: #0B1739;
+    color: white;
+    font-size: 17px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.user-stats {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    gap: 35px;
+}
+
+.stat-box {
+    border: 1px solid #343B4F;
+    background-color: #0B1739; 
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    width: 30%; 
+    min-width: 150px;
+}
+
+.stat-box h4 {
+    margin: 0 0 10px 0;
+    color: white;
+    font-weight: 400;
+}
+
+.stat-box p {
+    font-size: 15px;
+    margin: 0;
+    color: #AEB9E1;
+}
+
+.user-data-box {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #343B4F;
+    border-radius: 10px;
+    background-color: #0B1739;
+}
+
+.user-data-header {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    font-weight: 400;
+    border-bottom: 1px solid #343B4F;
+    background-color: #0B1739;
+}
+
+.table-container {
+    overflow-y: auto; 
+    max-height: 400px; 
+    border-radius: 10px;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0px 90px; 
+    padding-left: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #0B1739;
+    position: sticky; 
+    top: 0;
+    z-index: 11;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 10px;
+    border: none;
+}
+
+.header-actions {
+    display: flex; 
+    align-items: center; 
+    margin-right: 50px;
+    gap: 15px;
+}
+
+.header-actions .edit-item,
+.header-actions .delete-item {
+    align-items: center; 
+    cursor: pointer; 
+    font-size: 12.5px;
+    font-weight: 400;
+}
+
+.header-actions .edit-item {
+    color: #AEB9E1;
+}
+
+.header-actions .delete-item {
+    color: #ED194E;
+}
+
+.header-actions img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 5px; 
+}
+
+.editHeader {
+    margin-right: 8px;
+    filter: brightness(1.2); 
+}
+
+.deleteHeader {
+    margin-right: 5px;
+    filter: grayscale(100%); 
+}
+
+.table-header img {
+    margin: 0 8px;
+}
+
+.table-container::-webkit-scrollbar {
+    display: none;
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+}
+
+.user-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0px 70px; 
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.user-row:nth-child(odd) {
+    background-color: #081028;
+}
+
+.user-row:nth-child(even) {
+    background-color: #0B1739;
+}
+
+.user-item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.user-data {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+   margin-right: 5px;
+   margin-left: 30px;
+}
+
+.name {
+    font-size: 12px;
+    color: white;
+    display: inline-block; 
+    text-align: left;
+    font-size: 12px;
+    color: #AEB9E1;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: 120px; 
+}
+
+.birthdate {
+    text-align: left;
+    font-size: 12px;
+    color: #AEB9E1;
+    margin-left: 50px;
+}
+
+.email {
+    display: inline-block; 
+    text-align: left;
+    font-size: 12px;
+    color: #AEB9E1;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    margin-left: -10px;
+    max-width: 190px; 
+}
+
+
+.category {
+    text-align: center;
+    font-size: 12px;
+    color: #AEB9E1;
+    margin-left: 30px;
+}
+
+.status {
+    width: 70px;
+    display: inline;
+    font-size: 12px;
+    background-color: #05C16833;
+    color: #14CA74;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 0px solid green;
+    border-radius: 5px;
+}
+
+.status-inactive {
+    width: 70px;
+    display: inline;
+    font-size: 12px;
+    background-color: #FF5A6533;
+    color: #FF5A65;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 0px solid red;
+    border-radius: 5px;
+}
+
+.edit {
+    cursor: pointer;
+    display: flex;
+    margin-left: -10px;
+    margin-right: 30px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    gap: 5px;
+    border-top: 1px solid #343B4F;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 2px;
+    border: 1px solid #122353;
+    border-radius: 4px; 
+    text-decoration: none;
+    color: #D9E1FA;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid #343B4F !important;
+}
+
+.next_arrow {
+    margin-bottom: -1.5px;
+    margin-left: 10px;
+}
+
+.pagination a.active {
+    background-color: #162b70;
+    color: white;
+}
+
+.pagination a:hover {
+    background-color: #0A1330;
+    color: #D9E1FA;
+}
+
+.pagination a.pagination-prev,
+.pagination a.pagination-next {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.pagination a.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.spinner {
+    display: none;
+    position: absolute;
+    z-index: 5000;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #fff;
+    border-radius: 50%;
+    width: 40px; 
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-left: 400px;
+    margin-top: 300px;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
