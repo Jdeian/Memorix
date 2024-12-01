@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/navigations_black_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="none"
+        android:layout_marginBottom="55dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/redhat"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.194"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="452dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="10dp"
+                android:gravity="top"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14"
+                app:layout_constraintVertical_bias="0.015">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/questionnaire_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false" />
+
+                <TextView
+                    android:id="@+id/textclasses"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/redhat"
+                    android:textColor="@color/white"
+                    android:text="Latest courses"
+                    android:visibility="gone"
+                    android:textSize="20dp" />
+
+                <LinearLayout
+                    android:id="@+id/class_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_create_study_guide"
+                    android:layout_width="352dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="22dp"
+                    android:background="@drawable/radiusborder"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/books_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-17dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/studyguide_icon" />
+
+                    <TextView
+                        android:id="@+id/textview2123"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:fontFamily="@font/redhat"
+                        android:gravity="center"
+                        android:text="Create your"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textview213"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/redhat"
+                        android:gravity="center"
+                        android:text="own"
+                        android:textColor="@color/bluegreen"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textview233"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/redhat"
+                        android:gravity="center"
+                        android:text="study guide"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/home_create_notes"
+                    android:layout_width="352dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/radiusborder"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/note_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-157dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/create_notes" />
+
+                    <TextView
+                        android:id="@+id/textview3223"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="23dp"
+                        android:fontFamily="@font/redhat"
+                        android:gravity="center"
+                        android:text="Take"
+                        android:textColor="@color/white"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/textview2324"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/redhat"
+                        android:gravity="center"
+                        android:text="notes"
+                        android:textColor="@color/bluegreen"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textview2678"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="1dp"
+                        android:fontFamily="@font/redhat"
+                        android:gravity="center"
+                        android:text="!"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/home_create_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="17dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/create_class"
+                    tools:layout_editor_absoluteX="50dp"
+                    tools:layout_editor_absoluteY="407dp" />
+
+                <LinearLayout
+                    android:id="@+id/upgrade_memorix"
+                    android:layout_width="314dp"
+                    android:layout_height="53dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/radiusborder"
+                    android:backgroundTint="@color/bluegreen"
+                    android:gravity="center"
+                    android:layout_marginLeft="39dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/rocket_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/upgrade_icon" />
+
+                    <TextView
+                        android:id="@+id/textview7458"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/redhat"
+                        android:text="UPGRADE MEMORIX!"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp"
+                        android:textFontWeight="700"
+                        android:textSize="19sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/create_layout"
+        layout="@layout/activity_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"></include>
+
+    <include
+        android:id="@+id/error_toast"
+        layout="@layout/questionnaire_toast_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"></include>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="33dp"
+        android:layout_height="37dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/bluegreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

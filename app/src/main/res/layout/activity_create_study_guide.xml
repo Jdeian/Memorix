@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateStudyGuide">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_navigations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/redhat"
+        android:text="Create a new set of study guide!"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/studySet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21"
+        app:layout_constraintVertical_bias="0.04">
+
+        <EditText
+            android:id="@+id/title"
+            android:layout_width="340dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/redhat"
+            android:hint="Enter a title, like “Reviewer 1”, “Reviewer 2”"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="#898c8a"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="159dp" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="-8dp"
+            android:fontFamily="@font/redhat"
+            android:text="Title"
+            android:textColor="#c4c4c4"
+            android:textFontWeight="600"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="209dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/description"
+                android:layout_width="340dp"
+                android:layout_height="62dp"
+                android:backgroundTint="@color/studySet"
+                android:hint="Add description (optional)"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="#898c8a"
+                android:textSize="16dp"
+                tools:layout_editor_absoluteX="28dp"
+                tools:layout_editor_absoluteY="288dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="-8dp"
+            android:fontFamily="@font/redhat"
+            android:text="Description"
+            android:textColor="#c4c4c4"
+            android:textFontWeight="600"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continuebtn"
+            android:layout_width="285dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/redhat"
+            android:text="CONTINUE"
+            android:textColor="@color/black"
+            android:textFontWeight="600"
+            android:textSize="18dp"
+            app:cornerRadius="15dp"
+            tools:layout_editor_absoluteX="181dp"
+            tools:layout_editor_absoluteY="451dp" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/create_layout"
+        layout="@layout/activity_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+    </include>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="33dp"
+        android:layout_height="37dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/bluegreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371" />
+
+    <include
+        android:id="@+id/error_toast"
+        layout="@layout/questionnaire_toast_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+    </include>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

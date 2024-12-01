@@ -1,0 +1,59 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/card_front"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:elevation="10dp"
+        android:background="@drawable/created_note_bg">
+
+        <TextView
+            android:id="@+id/definition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:fontFamily="@font/redhat"
+            android:text="Definition"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/white"
+            android:paddingTop="200dp"
+            android:paddingBottom="200dp"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/card_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:backgroundTint="#006048"
+        android:background="@drawable/created_note_bg">
+
+        <TextView
+            android:id="@+id/term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/redhat"
+            android:textSize="20sp"
+            android:text="Term"
+            android:gravity="center"
+            android:paddingTop="200dp"
+            android:paddingBottom="200dp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+</FrameLayout>

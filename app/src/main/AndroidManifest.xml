@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Memorix"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".PayMayaPayment"
+            android:exported="false" />
+        <activity
+            android:name=".NewPassword"
+            android:exported="false" />
+        <activity
+            android:name=".OTPVerification"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".StudyGuideOption"
+            android:exported="false" />
+        <activity
+            android:name=".ImageScan"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentForm"
+            android:exported="false" />
+        <activity
+            android:name=".GcashPayment"
+            android:exported="false" />
+        <activity
+            android:name=".Members"
+            android:exported="false" />
+        <activity
+            android:name=".AfterPayment"
+            android:exported="false" />
+        <activity
+            android:name=".Payment"
+            android:exported="false" />
+        <activity
+            android:name=".Subcription"
+            android:exported="false" />
+        <activity
+            android:name=".Library"
+            android:exported="false" />
+        <activity
+            android:name=".AddToClass"
+            android:exported="false" />
+        <activity
+            android:name=".CreateClass"
+            android:exported="false" />
+        <activity
+            android:name=".ClassContents"
+            android:exported="false" />
+        <activity
+            android:name=".Class"
+            android:exported="false" />
+        <activity
+            android:name=".Note"
+            android:exported="false" />
+        <activity
+            android:name=".EditNote"
+            android:exported="false" />
+        <activity
+            android:name=".Test"
+            android:exported="false" />
+        <activity
+            android:name=".TestResult"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".FlashCard"
+            android:exported="false" />
+        <activity
+            android:name=".Registration"
+            android:exported="false" />
+        <activity
+            android:name=".StudyGuide"
+            android:exported="false" />
+        <activity
+            android:name=".CreateQuestionnaire"
+            android:exported="false" />
+        <activity
+            android:name=".CreateStudyGuide"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateNote"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".Introduction"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

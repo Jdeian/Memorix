@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Payment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="174dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="top|left"
+        app:srcCompat="@drawable/memorix_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:fontFamily="@font/redhat"
+        android:text="Payment Method"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/redhat"
+        android:text="You are one step closer for an upgrade!"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/redhat"
+        android:text="How would you like to pay?"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/gcash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/gcash" />
+
+        <ImageView
+            android:id="@+id/paymaya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:paddingBottom="20dp"
+            app:srcCompat="@drawable/paymaya" />
+
+        <ImageView
+            android:id="@+id/cash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/cash" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/payment_btn_bg"
+        android:gravity="center">
+    <LinearLayout
+        android:id="@+id/goback_btn"
+        android:layout_width="350dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/gray_border"
+        android:backgroundTint="@color/bluegreen"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/redhat"
+            android:gravity="center"
+            android:text="&lt;"
+            android:textFontWeight="700"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:paddingRight="120dp"
+            android:fontFamily="@font/redhat"
+            android:gravity="center"
+            android:text="Go Back"
+            android:textFontWeight="700"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+    </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Library">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/navigations_black_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="66dp"
+        android:fontFamily="@font/redhat"
+        android:text="Library"
+        android:textColor="#c4c4c4"
+        android:textSize="23dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/result_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="56dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/classes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/gray_border"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14">
+
+        <ImageView
+            android:id="@+id/imageview92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="20dp"
+            app:srcCompat="@drawable/class_icon" />
+
+        <TextView
+            android:id="@+id/textclasses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/redhat"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Your Courses"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="101dp"
+            tools:layout_editor_absoluteY="319dp" />
+
+        <ImageView
+            android:id="@+id/lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="gone"
+            app:srcCompat="@drawable/lock" />
+
+        <TextView
+            android:id="@+id/textview25522"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/redhat"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:text=">"
+            android:textColor="@color/white"
+            android:textSize="23dp" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/questionnaire_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/empty_library"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/baseline_library_books_24"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/empty_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/redhat"
+                android:text="You haven't created any questionnaires yet"
+                android:textColor="#c4c4c4"
+                android:textSize="15dp"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/create_layout"
+        layout="@layout/activity_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <include
+        android:id="@+id/error_toast"
+        layout="@layout/questionnaire_toast_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+    </include>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="33dp"
+        android:layout_height="37dp"
+        android:indeterminateTint="@color/bluegreen"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

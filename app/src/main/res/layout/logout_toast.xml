@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#80000000">
+
+    <LinearLayout
+        android:id="@+id/toast_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#80000000">
+
+        <LinearLayout
+            android:id="@+id/toastNest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginTop="280dp"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:background="@drawable/studyguide_features_bg"
+            android:backgroundTint="#262626">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textFontWeight="500"
+                android:fontFamily="@font/redhat"
+                android:textColor="@color/white"
+                android:text="Are you sure you want to"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textFontWeight="500"
+                android:layout_gravity="center"
+                android:fontFamily="@font/redhat"
+                android:textColor="@color/white"
+                android:text="log out?"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancelbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:backgroundTint="#3F3F3F"
+                android:fontFamily="@font/redhat"
+                android:text="No"
+                android:layout_marginRight="50dp"
+                android:textColor="@color/white"
+                android:textFontWeight="600"
+                android:textSize="18dp"
+                app:cornerRadius="10dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/yesbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:backgroundTint="@color/bluegreen"
+                android:fontFamily="@font/redhat"
+                android:text="Yes"
+                android:textColor="@color/black"
+                android:textFontWeight="600"
+                android:textSize="18dp"
+                app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

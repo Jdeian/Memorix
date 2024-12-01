@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:paddingLeft="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:backgroundTint="#303030"
+        android:background="@drawable/studyguide_features_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/definition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/redhat"
+            android:text="Definition"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="17dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/redhat"
+            android:text="Term"
+            android:layout_marginBottom="7dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#c4c4c4"
+            android:textSize="16dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

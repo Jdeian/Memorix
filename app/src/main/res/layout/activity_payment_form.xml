@@ -1,0 +1,206 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".PaymentForm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="174dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="top|left"
+            app:srcCompat="@drawable/memorix_logo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gray_border"
+            android:backgroundTint="#131313"
+            android:layout_margin="23dp"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/redhat"
+                android:text="Subscription"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/redhat"
+                android:text="Please select a subscription type. (For verification purpose)"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp">
+
+                <RadioButton
+                    android:id="@+id/monthly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/redhat"
+                    android:text="  Monthly"
+                    android:button="@drawable/custom_radiobutton"
+                    android:background="@android:color/transparent"
+                    app:buttonTint="@null"
+                    android:checked="false"
+                    app:useMaterialThemeColors="false" />
+
+                <RadioButton
+                    android:id="@+id/yearly"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="17dp"
+                    android:fontFamily="@font/redhat"
+                    android:text="  Yearly"
+                    android:button="@drawable/custom_radiobutton"
+                    android:background="@android:color/transparent"
+                    app:buttonTint="@null"
+                    android:checked="false"
+                    app:useMaterialThemeColors="false" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gray_border"
+            android:backgroundTint="#131313"
+            android:layout_margin="23dp"
+            android:padding="25dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/redhat"
+                android:text="Proof"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/redhat"
+                android:text="Kindly upload the proof of your payment."
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="7dp"
+                android:paddingBottom="7dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/add_file_bg">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_gravity="top|left"
+                    app:srcCompat="@drawable/upload_proof_icon" />
+
+                <TextView
+                    android:id="@+id/file"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/redhat"
+                    android:text="Add file"
+                    android:textColor="@color/bluegreen"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/payment_btn_bg"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/submit"
+                android:layout_width="350dp"
+                android:layout_height="53dp"
+                android:background="@drawable/gray_border"
+                android:backgroundTint="@color/bluegreen"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/redhat"
+                    android:gravity="center"
+                    android:text="Submit"
+                    android:textFontWeight="700"
+                    android:textColor="@color/black"
+                    android:textSize="19sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/error_toast"
+        layout="@layout/questionnaire_toast_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="33dp"
+            android:layout_height="37dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/bluegreen"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/code_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#80000000">
+
+        <LinearLayout
+            android:id="@+id/class_code_nest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="30dp"
+            android:orientation="vertical"
+            android:background="@drawable/created_note_bg"
+            android:backgroundTint="#202020">
+
+            <TextView
+                android:id="@+id/close_class_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:layout_gravity="right"
+                android:fontFamily="@font/redhat"
+                android:textFontWeight="600"
+                android:layout_weight="1"
+                android:layout_marginRight="25dp"
+                android:paddingTop="10dp"
+                android:textColor="@color/white"
+                android:text="X" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:textSize="20dp"
+                android:fontFamily="@font/redhat"
+                android:textColor="@color/white"
+                android:text="Course Code:" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_gravity="left"
+                android:background="@drawable/created_note_bg"
+                android:backgroundTint="#3D3D3D">
+
+                <EditText
+                    android:id="@+id/join_class_code"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/redhat"
+                    android:hint="Enter course code"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textColorHint="#898c8a"
+                    android:textSize="19dp" />
+
+                <ImageView
+                    android:id="@+id/paste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/baseline_content_paste_24" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#7a7a7a" />
+
+                <TextView
+                    android:id="@+id/join"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:fontFamily="@font/redhat"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:text="Join"
+                    android:textFontWeight="600"
+                    android:textColor="@color/white"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Memorix</string>
+    <string name="underlined_text"><u>Login here!</u></string>
+    <string name="underlined_textForgotPassword"><u>Forgot password</u></string>
+    <string name="underlined_textSignUp"><u>Sign up now!</u></string>
+    <string name="note_u"><u>U</u></string>
+</resources>

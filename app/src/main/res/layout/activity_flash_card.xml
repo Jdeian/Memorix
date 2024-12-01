@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="174dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="7dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="top|left"
+        app:srcCompat="@drawable/memorix_logo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exitbtn"
+        android:layout_width="120dp"
+        android:layout_height="53dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="19dp"
+        android:backgroundTint="@color/bluegreen"
+        android:fontFamily="@font/redhat"
+        android:text="Exit"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:cornerRadius="25dp" />
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:fontFamily="@font/redhat"
+            android:layout_marginTop="10dp"
+            android:text="Review your flashcard"
+            android:textColor="#898c8a"
+            android:textSize="25dp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/cards_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/shuffle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_gravity="left"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="200dp"
+            app:srcCompat="@drawable/shuffle_icon"/>
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_gravity="right"
+            android:layout_marginBottom="80dp"
+            app:srcCompat="@drawable/play_icon"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="33dp"
+            android:layout_height="37dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/bluegreen"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/error_toast"
+        layout="@layout/questionnaire_toast_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+    </include>
+
+</FrameLayout>

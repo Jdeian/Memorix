@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|center"
+    android:background="@drawable/questionnaire_bg"
+    android:layout_marginTop="20dp"
+    android:backgroundTint="#131313"
+    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/questionnaire_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="600"
+            android:fontFamily="@font/redhat"
+            android:text="1."
+            android:textColor="#c4c4c4"
+            android:textFontWeight="600"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="209dp" />
+
+    <EditText
+        android:id="@+id/term"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/studySet"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="159dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-8dp"
+        android:fontFamily="@font/redhat"
+        android:text="Term"
+        android:textColor="#c4c4c4"
+        android:textFontWeight="600"
+        android:textSize="16dp"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="209dp" />
+
+    <EditText
+        android:id="@+id/definition"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/studySet"
+        android:inputType="text"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_gravity="center"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="288dp" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="21dp"
+            android:layout_marginTop="-8dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/redhat"
+            android:text="Definition"
+            android:textColor="#c4c4c4"
+            android:textFontWeight="600"
+            android:textSize="16dp"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="341dp" />
+
+</LinearLayout>

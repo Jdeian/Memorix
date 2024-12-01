@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".TestResult">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="174dp"
+        android:layout_height="55dp"
+        android:layout_gravity="top|left"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintEnd_toStartOf="@+id/exitbtn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/memorix_logo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exitbtn"
+        android:layout_width="120dp"
+        android:layout_height="53dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="19dp"
+        android:backgroundTint="@color/bluegreen"
+        android:fontFamily="@font/redhat"
+        android:text="Exit"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="72dp"
+        android:fontFamily="@font/redhat"
+        android:text="Study harder to improve!"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ScrollView
+        android:id="@+id/result_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/gradient_bg"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/questions_bg"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="20dp">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pie_chart"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="-5dp" />
+
+                <TextView
+                    android:id="@+id/holeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-118dp"
+                    android:layout_marginTop="85dp"
+                    android:fontFamily="@font/redhat"
+                    android:text="0%"
+                    android:textColor="@android:color/white"
+                    android:textSize="21sp" />
+
+                <LinearLayout
+                    android:id="@+id/correct_incorrect_result_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/textview828272"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:layout_weight="600"
+                            android:fontFamily="@font/redhat"
+                            android:text="Correct"
+                            android:textColor="@color/bluegreen"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/correct_answers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/result_correct_question_bg"
+                            android:fontFamily="@font/redhat"
+                            android:paddingLeft="30dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="30dp"
+                            android:paddingBottom="5dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textview87272"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:fontFamily="@font/redhat"
+                            android:text="Incorrect"
+                            android:textColor="@color/piechart_wrong"
+                            android:textFontWeight="600"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/incorrect_answers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/incorrect_bg"
+                            android:fontFamily="@font/redhat"
+                            android:paddingLeft="30dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="30dp"
+                            android:paddingBottom="5dp"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+                <TextView
+                    android:id="@+id/retakeTestBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/redhat"
+                    android:text="Retake Test!"
+                    android:background="@drawable/questionnaire_bg"
+                    android:backgroundTint="@color/bluegreen"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="70dp"
+                    android:paddingRight="70dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    tools:layout_editor_absoluteX="35dp"
+                    tools:layout_editor_absoluteY="341dp" />
+
+            <LinearLayout
+            android:id="@+id/result_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="-20dp"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/create_layout"
+        layout="@layout/activity_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="33dp"
+        android:layout_height="37dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/bluegreen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

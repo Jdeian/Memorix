@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/navigations_black_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include">
+
+        <ImageView
+            android:id="@+id/default_profile"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="150dp"
+            app:layout_constraintBottom_toTopOf="@+id/user_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/upload_profile" />
+
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="19dp"
+            android:fontFamily="@font/redhat"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/classes"
+            app:layout_constraintEnd_toEndOf="@+id/profile_img"
+            app:layout_constraintTop_toBottomOf="@+id/profile_img" />
+
+        <LinearLayout
+            android:id="@+id/classes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/gray_border"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/logout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name">
+
+            <ImageView
+                android:id="@+id/imageview92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                app:srcCompat="@drawable/class_icon" />
+
+            <TextView
+                android:id="@+id/textclasses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/redhat"
+                android:paddingTop="20dp"
+                android:layout_weight="1"
+                android:paddingBottom="20dp"
+                android:text="Courses"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                tools:layout_editor_absoluteX="101dp"
+                tools:layout_editor_absoluteY="319dp" />
+
+            <ImageView
+                android:id="@+id/lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:visibility="gone"
+                app:srcCompat="@drawable/lock" />
+
+            <TextView
+                android:id="@+id/textview25522"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/redhat"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text=">"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/gray_border"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageview4592"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                app:srcCompat="@drawable/logout_icon" />
+
+            <TextView
+                android:id="@+id/textview453737"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/redhat"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginLeft="-5dp"
+                android:text="Log"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+            <TextView
+                android:id="@+id/textview45837"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/redhat"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:text="out"
+                android:textColor="@color/bluegreen"
+                android:textSize="23dp" />
+
+            <TextView
+                android:id="@+id/textview9522"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/redhat"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:text=">"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="23dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/logout_confirmation"
+        layout="@layout/logout_toast"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone">
+    </include>
+
+    <include
+        android:id="@+id/create_layout"
+        layout="@layout/activity_create"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></include>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="33dp"
+        android:layout_height="37dp"
+        android:indeterminateTint="@color/bluegreen"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.371" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

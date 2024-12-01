@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".StudyGuideOption">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="174dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="top|left"
+            app:srcCompat="@drawable/memorix_logo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/redhat"
+            android:text="Craft Smart!"
+            android:textColor="#c4c4c4"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:id="@+id/create_manually"
+            android:layout_width="352dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radiusborder"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-72dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/manually_icon" />
+
+            <TextView
+                android:id="@+id/textview2123"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/redhat"
+                android:gravity="center"
+                android:text="Create a"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textview213"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/redhat"
+                android:gravity="center"
+                android:text="set"
+                android:textColor="@color/bluegreen"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textview233"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/redhat"
+                android:gravity="center"
+                android:text="manually"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/select_images"
+            android:layout_width="352dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radiusborder"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-17dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/generate_img_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:fontFamily="@font/redhat"
+                android:gravity="center"
+                android:text="Generate"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/redhat"
+                android:gravity="center"
+                android:text="set"
+                android:textColor="@color/bluegreen"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/redhat"
+                android:gravity="center"
+                android:text="through image"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ImageScan">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="174dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="top|left"
+            app:srcCompat="@drawable/memorix_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/gray_border"
+        android:backgroundTint="#131313"
+        android:layout_marginTop="23dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginLeft="23dp"
+        android:padding="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/redhat"
+            android:text="Generate"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/redhat"
+            android:text="Insert image (.jpeg, .jpg, .png)."
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/upload_file_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/add_file_bg">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_gravity="top|left"
+                app:srcCompat="@drawable/upload_proof_icon" />
+
+            <TextView
+                android:id="@+id/file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/redhat"
+                android:text="Add file"
+                android:textColor="@color/bluegreen"
+                android:textSize="18dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/generatebtn"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:backgroundTint="@color/bluegreen"
+            android:fontFamily="@font/redhat"
+            android:text="Generate"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            app:cornerRadius="7dp" />
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/error_toast"
+        layout="@layout/questionnaire_toast_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="33dp"
+            android:layout_height="37dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/bluegreen"/>
+    </RelativeLayout>
+
+</FrameLayout>
